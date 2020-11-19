@@ -9,7 +9,7 @@ The source data resides in S3 and needs to be processed in Sparkify's data wareh
 
 ## 2. DAG Configuration
 The image below is the configuration in airflow of this DAG pipeline.
-![Airflow DAG](images/dag.png)
+![Airflow DAG Pipeline](../images/dag.png)
 
 ### 2.1 Stage events 
 This step is responsible to extract the data from S3 and load it into stage tables in Redshift, making it easier to work with them to load the fact/dimensions tables.
@@ -17,7 +17,7 @@ This step is responsible to extract the data from S3 and load it into stage tabl
 ### 2.2 Fact/Dimensions tables
 This step is responsible to load the data into fact/dimensions tables. This step also make some transformations in data to load them.
 This new struct is based on star schema as we can see in the image below.
-![Star schema](images/database.png)
+![Stage tables and Star schema](../images/database.png)
 
 ### 2.3 Fact/Dimensions tables
 This step is responsible to make data quality checks. For this step we are checking if there is data on fact/dimensions tables.
